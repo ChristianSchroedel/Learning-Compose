@@ -1,28 +1,35 @@
 package de.schroedel.learning.compose.ui.screens
 
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.tooling.preview.datasource.LoremIpsum
+import androidx.compose.ui.unit.dp
 import de.schroedel.learning.compose.ui.theme.LearningComposeTheme
 
 @Composable
 fun BasicScreen(modifier: Modifier = Modifier) {
-    val text = LoremIpsum().values.joinToString()
-    // TODO #1: Add a Text element.
+    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+        Image(
+            painter = painterResource(de.schroedel.learning.compose.R.drawable.profile_picture),
+            contentDescription = "Profile Picture",
+            modifier = Modifier
+                .size(220.dp)
+                .padding(6.dp)
+                .clip(RoundedCornerShape(10.dp))
+        )
 
-    // TODO #2: Load text from a string resource.
-
-    // TODO #3: Add image and load content from a drawable resource.
-
-    // TODO #4: Display text and image vertically alongside each other.
-
-    // TODO #5: Center the text underneath the image.
-
-    // TODO #6: Use a Modifier to apply this styling on the image element:
-    //  a) size (220 dp)
-    //  b) padding (6 dp each side)
-    //  c) rounded corners (individual corner radius of 10 dp)
+        Text(text = stringResource(de.schroedel.learning.compose.R.string.learning_compose))
+    }
 }
 
 @Preview(showBackground = true)
