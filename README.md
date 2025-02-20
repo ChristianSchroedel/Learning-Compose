@@ -27,7 +27,7 @@ Basic knowledge for Jetpack Compose beginners is thought in a small step by step
 
 **Follow along by watching this video (German + English Subtitles):**
 
-[![Compose Basics](doc/images/Compose%20Grundlagen.png)](https://youtu.be/Ziyz76d5IcQ)
+[![Compose Basics](doc/images/thumbnail_compose_basics.png)](https://youtu.be/Ziyz76d5IcQ)
 
 ## Knowledge Base
 
